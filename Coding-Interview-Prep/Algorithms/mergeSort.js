@@ -10,6 +10,7 @@ let merge = (arr, l, m, r) => {
 			rIndex++
 		}
 	}
+	// Adding remaining items in the left and right
 	mArr = mArr.concat(arr.slice(lIndex, m + 1));
 	mArr = mArr.concat(arr.slice(rIndex, r + 1));
 	arr.splice(l, mArr.length, ...mArr)
