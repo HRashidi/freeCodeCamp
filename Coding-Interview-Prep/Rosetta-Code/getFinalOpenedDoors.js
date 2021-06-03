@@ -25,5 +25,6 @@ function getFinalOpenedDoors(numDoors) {
 	}
 	return openDoors;
 }
+
 let result = getFinalOpenedDoors(100);
 console.log(result)
