@@ -49,7 +49,8 @@ function selection(string) {
 	};
 
 	if(string.length === 2 ) {
-		return opArr.map(op => ([string[0], "+", string[1]]));
+		return opArr.map(op => ([string[0], op , string[1]]));
+		;
 	}
 
 	let allParts = [];
@@ -83,4 +84,4 @@ function solve24 (numStr) {
 }
 
 console.log(solve24("4878"));	// (7-8/8)*4
-// console.log(solve24("6789"));	// 6*8/(9-7)
+console.log(solve24("6789"));	// 6*8/(9-7)
