@@ -74,14 +74,16 @@ function selection(string) {
 
 function solve24 (numStr) {
 	let perms =  allPerm(numStr);
-	let domain = [];
 	
+	let res = null;
 	perms.forEach(el => {
-		domain = domain.concat(selection(el));
+		if(res) return;
+		let domain = selection(el);
+		res = domain.find(el => calc(el) === 24);
+		if(res) res = arr2str(res);
 	})
-	let res = domain.find(el => calc(el) === 24)
-	return res ? arr2str(res) : null
+	return res;
 }
 
 console.log(solve24("4878"));	// (7-8/8)*4
-console.log(solve24("6789"));	// 6*8/(9-7)
+// console.log(solve24("12345"));	// 6*8/(9-7)
