@@ -1,0 +1,8 @@
+use chatApp
+db.createUser(
+  {
+    user: "chatAppUser",
+    pwd: "qawse342",
+    roles: [ { role: "readWrite", db: "chatApp" }]
+  }
+)
