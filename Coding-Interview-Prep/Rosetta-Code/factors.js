@@ -8,7 +8,7 @@ function factors(num) {
 			[...subFactors].forEach(el => {
 				if(!subFactors.includes(el * i)) subFactors.push(el * i);
 			});
-			subFactors.sort((a,b) => a -b)
+			subFactors.sort((a,b) => a - b)
 			return subFactors
 		}
 		i++;
